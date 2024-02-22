@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Wind Waker HTML/CSS/JS</title>
+      <link rel="icon" href="./files/Media/icon.png" />
+      <link rel="stylesheet" href="./files/CSSandJS/style.css" />
+      <script defer src="./files/CSSandJS/script.js"></script>
+   </head>
+   <body>
+      <section id="body">
+         <div id="main">
+            <h1 class="maintitle">L'html</h1>
+            <span
+               ><a target="_blank" href="https://www.twitch.tv/endvad"
+                  ><img
+                     id="imgid"
+                     onmouseover="hoverAnimInImg()"
+                     onmouseout="hoverAnimOutImg()"
+                     src="./files/Media/banner.jpg"
+                     alt="banner"
+                     height="200" /></a
+            ></span>
+
+            <select id="choix" name="choice" onchange="selectorChange()">
+               <option value="cr">Croissant</option>
+               <option value="pc">Pinte au chocolat</option>
+               <option value="em">Elon Musk</option>
+            </select>
+            <button onclick="clickCroissant()">Croissant</button>
+            <button onclick="clickPinteAuChocolat()">Pinte au chocolat</button>
+            <button onclick="clickElonMusk()">Elon Musk</button>
+
+            <h2>les balises</h2>
+
+            <p>
+               Aujourd'hui je vais vous parler de
+               <strong><em>l'HTML</em></strong
+               >, c'est un espèce de mémo (les crochets seront remplacés par "
+               "):
+            </p>
+            <br />
+
+            <p>
+               Tout d'abord les balises <strong>"p"</strong> et
+               <strong>"br"</strong> Elles servent respectivement à écrire un
+               paragraphe et à faire un saut de ligne !
+            </p>
+            <br />
+
+            <p>
+               Ensuite les balises de titres
+               <strong>"h1","h2",...,"h6"</strong> de moins en moins importants.
+               Exemple:
+            </p>
+            <br />
+            <h3>Moyen titre</h3>
+            <br />
+
+            <p>
+               On trouve aussi des balises cosmétiques pour l'importance du
+               texte:
+               <strong>"em"</strong> pour
+               <em
+                  id="emid"
+                  onmouseover="hoverAnimInEm()"
+                  onmouseout="hoverAnimOutEm()"
+                  >l'italique</em
+               >,
+
+               <strong>"strong"</strong> pour
+               <strong
+                  id="strongid"
+                  onmouseover="hoverAnimInStrong()"
+                  onmouseout="hoverAnimOutStrong()"
+                  >le gras</strong
+               >
+               et
+
+               <strong>"mark"</strong> pour
+               <mark
+                  id="markid"
+                  onmouseover="hoverAnimInMark()"
+                  onmouseout="hoverAnimOutMark()"
+                  >le surlignage</mark
+               >
+               (par défaut en jaune).
+            </p>
+            <br />
+
+            <p>
+               La balise <strong>"ul"</strong> est très utile, elle sert à faire
+               des listes à puces, c'est-à-dire à points, chacun d'eux utilise
+               la balise <strong>"li"</strong>. Exemple:
+            </p>
+            <ul>
+               <li>Boulot</li>
+               <li>Resto</li>
+               <li>Dodo</li>
+            </ul>
+            <p>
+               Pour numéroter cette liste, il faut tout simplement remplacer la
+               balise <strong>"ul"</strong> par <strong>"ol"</strong>. Exemple:
+            </p>
+            <ol>
+               <li>Boulot</li>
+               <li>Resto</li>
+               <li>Dodo</li>
+            </ol>
+            <br />
+            <p>
+               Voici une autre balise très utile ainsi que son attribut qui à
+               eux deux permettent de créer des liens
+               <strong
+                  >"a href="lien du site, du fichier à télécharger ou de la page
+                  en .html"Le mot cliquable"/a"</strong
+               ><br />
+               Exemple: Voici ma
+               <a
+                  href="https://www.youtube.com/channel/UC8Kp1NJucy07L-O7bLPzSkQ/?sub_confirmation=1"
+                  >chaîne youtube </a
+               >.
+            </p>
+            <br /><br />
+            <hr />
+
+            <div id="form">
+               <form id="mainform">
+                  <a target="_blank" href="./form.html"
+                     >Petit formulaire parce qu'on aime bien espionner les gens
+                     comme la NSA. (n'hésitez pas à y participer)</a
+                  >
+               </form>
+               <br />
+            </div>
+            <hr />
+
+            <audio autoplay loop controls>
+               <source src="./files/Media/music.mp3" type="audio/mpeg" />
+               Petite musique d'ambuance
+            </audio>
+            <br />
+            <hr />
+            Vous pouvez aussi la
+            <a href="./files/Media/music.mp3" download>télécharger</a>.
+            <hr />
+            <button onclick="clickPassword()">(mot de passe secret)</button>
+         </div>
+      </section>
+   </body>
+</html>

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&family=RocknRoll+One&display=swap");
+h1 {
+   color: red;
+   font-family: "Reggae One", sans-serif;
+}
+
+body {
+   background: url("../Media/formwall.jpg") no-repeat center/cover;
+   height: 98vh;
+   color: rgb(255, 56, 56);
+   font-weight: bold;
+   font-size: larger;
+   font-family: "RocknRoll One", sans-serif;
+}
+
+textarea {
+   width: 50%;
+   resize: vertical;
+}
+
+#submit {
+   display: none;
+}

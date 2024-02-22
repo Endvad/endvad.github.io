@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Formulaire</title>
+      <link rel="icon" href="./files/Media/iconform.png" />
+      <link rel="stylesheet" href="./files/CSSandJS/formstyle.css" />
+   </head>
+   <body>
+      <section>
+         <h1>Formulaire</h1>
+         <div class="main">
+            <form action="#" method="POST" id="form">
+               Entrez toutes les informations :<br /><br />
+               <span id="pseudo"
+                  >Entrez votre Pseudo
+                  <input type="text" name="Pseudo" id="name" /></span
+               ><br />
+               <span id="email"
+                  >Entrez votre adresse mail
+                  <input type="email" name="Email" id="mail" /></span
+               ><br />
+               <span id="birthday"
+                  >Entrez votre date de naissance
+                  <input type="date" name="Birthday" id="birth" /></span
+               ><br />
+               <span id="phonenumber"
+                  >Entrez votre numéro de téléphone
+                  <input type="tel" name="phone" id="phone" /></span
+               ><br /><br />
+               <span id="entermessage"
+                  >Entrez votre message <br /><textarea
+                     id="message"
+                     name="message"
+                     cols="100"
+                     rows="5"
+                  ></textarea></span
+               ><br />
+               <span
+                  ><input type="submit" id="submit" value="Envoyez !"
+               /></span>
+               <span><input type="reset" value="Rénitialiser" /></span>
+            </form>
+         </div>
+      </section>
+      <script>
+         const form = document.getElementById("form");
+         const nameInput = document.getElementById("name");
+         const name = document.getElementById("pseudo");
+         const mailInput = document.getElementById("mail");
+         const mail = document.getElementById("email");
+         const birthInput = document.getElementById("birth");
+         const birth = document.getElementById("birthday");
+         const phoneInput = document.getElementById("phone");
+         const phone = document.getElementById("phonenumber");
+         const messageInput = document.getElementById("message");
+         const message = document.getElementById("entermessage");
+         const submitButton = document.getElementById("submit");
+
+         function validateName() {
+            if (nameInput.value.trim() === "") {
+               name.style.color = "red";
+               return false;
+            } else {
+               name.style.color = "lime";
+               return true;
+            }
+         }
+         function validateMail() {
+            if (mailInput.value.indexOf("@") === -1) {
+               mail.style.color = "red";
+               return false;
+            } else {
+               mail.style.color = "lime";
+               return true;
+            }
+         }
+
+         function validateBirth() {
+            if (birthInput.value === "") {
+               birth.style.color = "red";
+               return false;
+            } else {
+               birth.style.color = "lime";
+               return true;
+            }
+         }
+
+         function validatePhone() {
+            if (phoneInput.value.length !== 10 || isNaN(phoneInput.value)) {
+               phone.style.color = "red";
+               return false;
+            } else {
+               phone.style.color = "lime";
+               return true;
+            }
+         }
+
+         function validateMessage() {
+            if (messageInput.value.trim() === "") {
+               message.style.color = "red";
+               return false;
+            } else {
+               message.style.color = "lime";
+               return true;
+            }
+         }
+
+         function validateForm() {
+            const isValidName = validateName();
+            const isValidMail = validateMail();
+            const isValidBirth = validateBirth();
+            const isValidPhone = validatePhone();
+            const isValidMessage = validateMessage();
+
+            if (
+               isValidName &&
+               isValidMail &&
+               isValidBirth &&
+               isValidPhone &&
+               isValidMessage
+            ) {
+               submitButton.style.display = "block";
+            } else {
+               submitButton.style.display = "none";
+            }
+         }
+
+         nameInput.addEventListener("input", validateForm);
+         mailInput.addEventListener("input", validateForm);
+         birthInput.addEventListener("input", validateForm);
+         phoneInput.addEventListener("input", validateForm);
+         messageInput.addEventListener("input", validateForm);
+      </script>
+   </body>
+</html>
